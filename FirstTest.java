@@ -21,14 +21,14 @@ public class FirstTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://sakuraweb.ru/wp-login.php?redirect_to=http%3A%2F%2Fsakuraweb.ru%2Fwp-admin%2F&reauth=1");
+        driver.get("https://mail.ukr.net/desktop/login");
     }
     @Test
     public void userLogin() {
-        WebElement loginField = driver.findElement(By.name("Имя пользователя или e-mail"));
-        loginField.sendKeys("drew362");
-        WebElement passwordField = driver.findElement(By.name("Пароль"));
-        passwordField.sendKeys("041989Aa");
+        WebElement loginField = driver.findElement(By.id("login"));
+        loginField.sendKeys("autotestorgua");
+        WebElement passwordField = driver.findElement(By.id("password"));
+        passwordField.sendKeys("testpass");
         WebElement loginButton = driver.findElement(By.xpath("//button[text()='Войти']"));
         loginButton.click();
         WebElement profileUser = driver.findElement(By.cssSelector(".login-button__user"));
