@@ -19,7 +19,7 @@ public class Test2 {
         WebElement loginField = driver.findElement(By.id("user_login"));
         loginField.sendKeys("drew362");
         WebElement passwordField = driver.findElement(By.id("user_pass"));
-        passwordField.sendKeys("041989Aa");
+        passwordField.sendKeys("?");
         WebElement loginButton = driver.findElement(By.id("wp-submit"));
         loginButton.click();
 
